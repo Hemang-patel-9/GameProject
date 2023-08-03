@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Document</title>
+	<link rel="stylesheet" href="snake_and_ladder.css" />
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+	<script src="snake_and_ladder.js"></script>
+	<script src="../js/bootstrap.bundle.min.js"></script>
+</head>
+<body onload="init()" class="bg-info">
+	<div class="container-box">
+		<div class="diceImg">
+			<img src="1.png" alt="dice 1 not found" onclick="FlippingDice()" id="diceIMG1" />
+		</div>
+		<div class="board">
+			<div class="box" id="box100">100</div><div class="box" id="box99">99</div><div class="box" id="box98">98</div><div class="box" id="box97">97</div><div class="box" id="box96">96</div><div class="box" id="box95">95</div><div class="box" id="box94">94</div><div class="box" id="box93">93</div><div class="box" id="box92">92</div><div class="box" id="box91">91</div><div class="box" id="box81">81</div><div class="box" id="box82">82</div><div class="box" id="box83">83</div><div class="box" id="box84">84</div><div class="box" id="box85">85</div><div class="box" id="box86">86</div><div class="box" id="box87">87</div><div class="box" id="box88">88</div><div class="box" id="box89">89</div><div class="box" id="box90">90</div><div class="box" id="box80">80</div><div class="box" id="box79">79</div><div class="box" id="box78">78</div><div class="box" id="box77">77</div><div class="box" id="box76">76</div><div class="box" id="box75">75</div><div class="box" id="box74">74</div><div class="box" id="box73">73</div><div class="box" id="box72">72</div><div class="box" id="box71">71</div><div class="box" id="box61">61</div><div class="box" id="box62">62</div><div class="box" id="box63">63</div><div class="box" id="box64">64</div><div class="box" id="box65">65</div><div class="box" id="box66">66</div><div class="box" id="box67">67</div><div class="box" id="box68">68</div><div class="box" id="box69">69</div><div class="box" id="box70">70</div><div class="box" id="box60">60</div><div class="box" id="box59">59</div><div class="box" id="box58">58</div><div class="box" id="box57">57</div><div class="box" id="box56">56</div><div class="box" id="box55">55</div><div class="box" id="box54">54</div><div class="box" id="box53">53</div><div class="box" id="box52">52</div><div class="box" id="box51">51</div><div class="box" id="box41">41</div><div class="box" id="box42">42</div><div class="box" id="box43">43</div><div class="box" id="box44">44</div><div class="box" id="box45">45</div><div class="box" id="box46">46</div><div class="box" id="box47">47</div><div class="box" id="box48">48</div><div class="box" id="box49">49</div><div class="box" id="box50">50</div><div class="box" id="box40">40</div><div class="box" id="box39">39</div><div class="box" id="box38">38</div><div class="box" id="box37">37</div><div class="box" id="box36">36</div><div class="box" id="box35">35</div><div class="box" id="box34">34</div><div class="box" id="box33">33</div><div class="box" id="box32">32</div><div class="box" id="box31">31</div><div class="box" id="box21">21</div><div class="box" id="box22">22</div><div class="box" id="box23">23</div><div class="box" id="box24">24</div><div class="box" id="box25">25</div><div class="box" id="box26">26</div><div class="box" id="box27">27</div><div class="box" id="box28">28</div><div class="box" id="box29">29</div><div class="box" id="box30">30</div><div class="box" id="box20">20</div><div class="box" id="box19">19</div><div class="box" id="box18">18</div><div class="box" id="box17">17</div><div class="box" id="box16">16</div><div class="box" id="box15">15</div><div class="box" id="box14">14</div><div class="box" id="box13">13</div><div class="box" id="box12">12</div><div class="box" id="box11">11</div><div class="box" id="box1"><img src="pawns1.jpg" alt="pawns1 not found" class="pawns1" id="pawns1" /><img src="pawns2.jpg" alt="pawns2 not found" class="pawns2" id="pawns2"/>1</div><div class="box" id="box2">2</div><div class="box" id="box3">3</div><div class="box" id="box4">4</div><div class="box" id="box5">5</div><div class="box" id="box6">6</div><div class="box" id="box7">7</div><div class="box" id="box8">8</div><div class="box" id="box9">9</div><div class="box" id="box10">10</div>
+			<img src="ladder1.png" alt="ladder 1 not found" id="l1" />
+			<img src="ladder2.png" alt="ladder 2 not found" id="l2" />
+			<img src="ladder3.png" alt="ladder 3 not found" id="l3" />
+			<img src="ladder3.png" alt="ladder 4 not found" id="l4" />
+			<img src="ladder2.png" alt="ladder 5 not found" id="l5" />
+			<img src="ladder1.png" alt="ladder 6 not found" id="l6" />
+			<img src="snake1.png" alt="snake 1 not found" id="s1" />
+			<img src="snake2.png" alt="snake 2 not found" id="s2" />
+			<img src="snake3.png" alt="snake 3 not found" id="s3" />
+			<img src="snake4.png" alt="snake 4 not found" id="s4" />
+			<img src="snake5.png" alt="snake 5 not found" id="s5" />
+			<img src="snake6.png" alt="snake 6 not found" id="s6" />
+		</div>
+		<div class="diceImg">
+			<img src="1.png" alt="dice 2 not found" onclick="FlippingDice()" id="diceIMG2" />
+		</div>
+	</div>
+</body>
+
+</html>

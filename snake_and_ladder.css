@@ -1,0 +1,272 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+body {
+	height: 99vh;
+	width: 100%;
+}
+
+.container-box {
+	position: absolute;
+	height: 98%;
+	width: 85%;
+	float: left;
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.diceImg {
+	height: 100%;
+	width: 10%;
+	background-color: rgba(150, 255, 47, 1);
+	float: left;
+}
+
+.diceImg img {
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 25%;
+	height: 15%;
+	width: 100%;
+}
+
+.board {
+	height: 100%;
+	width: 80%;
+	background-color: rgba(173, 255, 47, 1);
+	float: left;
+	z-index: -9;
+}
+
+.box {
+	z-index: 1;
+	width: 9.75%;
+	height: 9.6%;
+	border: 2px solid rgba(0, 0, 0, 1);
+	margin: 1.7px 1px 1px 1.1px;
+	padding: 1px;
+	position: inherit;
+	float: left;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	font-size: x-large;
+	font-family: 'Franklin Gothic Medium';
+	font-weight: 900;
+}
+
+.board img {
+	position: absolute;
+	border: none;
+	outline: none;
+}
+
+/* disigning snakes and ladders start */
+
+#l1 {
+	z-index: 9;
+	rotate: none;
+	top: 5.2%;
+	left: 20.6%;
+	height: 23%;
+	width: 5%;
+}
+
+#l2 {
+	z-index: 9;
+	right: none;
+	left: 81.5%;
+	top: 50%;
+	width: 5%;
+	height: 44%;
+}
+
+#l3 {
+	z-index: 9;
+	rotate: 45deg;
+	left: 28%;
+	top: 47%;
+	height: 32%;
+	width: 3.5%;
+}
+
+#l4 {
+	z-index: 9;
+	rotate: 150deg;
+	left: 48%;
+	top: 24%;
+	height: 35%;
+	width: 4.6%;
+
+}
+
+#l5 {
+	z-index: 9;
+	rotate: 40deg;
+	top: 38.5%;
+	left: 62.5%;
+	height: 53%;
+	width: 5.5%;
+}
+
+#l6 {
+	z-index: 9;
+	rotate: none;
+	top: 11%;
+	left: 69%;
+	height: 25%;
+	width: 4.6%;
+
+}
+
+#s1 {
+	z-index: 9;
+	top: 33%;
+	rotate: none;
+	left: 15%;
+	height: 30%;
+	width: 11.4%;
+}
+
+#s2 {
+	z-index: 9;
+	rotate: none;
+	top: 70%;
+	left: 22.5%;
+	height: 25%;
+	width: 18%;
+}
+
+#s3 {
+	z-index: 9;
+	rotate: 30deg;
+	top: -3%;
+	left: 23%;
+	height: 72%;
+	width: 7.7%;
+}
+
+#s4 {
+	z-index: 9;
+	rotate: none;
+	top: 4%;
+	left: 76%;
+	height: 40%;
+	width: 10%;
+}
+
+#s5 {
+	z-index: 9;
+	rotate: none;
+	top: 45%;
+	left: 40%;
+	height: 25%;
+	width: 10%;
+}
+
+#s6 {
+	z-index: 9;
+	rotate: 45deg;
+	top: 66%;
+	left: 65%;
+	height: 25%;
+	width: 15%;
+}
+
+/* disigning snakes and ladders end */
+#box68,
+#box69,
+#box73,
+#box79,
+#box82,
+#box88 {
+	justify-content: left;
+	align-items: center;
+}
+
+#box11,
+#box30,
+#box31,
+#box44,
+#box50 {
+	justify-content: right;
+	align-items: center;
+}
+
+#box18,
+#box34,
+#box48,
+#box59,
+#box78 {
+	justify-content: start;
+	align-items: start;
+}
+
+#box23,
+#box24,
+#box46 {
+	justify-content: left;
+	align-items: end;
+}
+
+#box27,
+#box38 {
+	justify-content: right;
+	align-items: end;
+}
+
+#box55 {
+	justify-content: right;
+	align-items: center;
+}
+
+#box15,
+#box65 {
+	justify-content: left;
+	align-items: end;
+}
+
+#box62,
+#box76,
+#box97 {
+	justify-content: center;
+	align-items: start;
+}
+
+/*Pawns designing start*/
+.pawns1 {
+	position: absolute;
+	height: 5%;
+	width: 1.7%;
+	z-index: 990;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.pawns2 {
+	position: absolute;
+	height: 5%;
+	width: 1.7%;
+	z-index: 990;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/*Pawns designing end*/
+/*giving media qury and make it responsive start*/
+
+@media screen {
+	
+}
+
+/*giving media qury and make it responsive end*/

@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+body {
+	height: 99vh;
+	width: 100%;
+}
+
+.container-box {
+	position: absolute;
+	height: 98%;
+	width: 85%;
+	float: left;
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.diceImg {
+	height: 100%;
+	width: 10%;
+	background-color: rgba(150, 255, 47, 1);
+	float: left;
+}
+.diceImg img
+{
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	border-radius: 25%;
+	height: 15%;
+	width: 100%;
+}
+
+.board {
+	height: 100%;
+	width: 80%;
+	background-color: rgba(173, 255, 47, 1);
+	float: left;
+	z-index: -9;
+}
+
+.box {
+	z-index: 1;
+	width: 9.75%;
+	height: 9.6%;
+	border: 2px solid rgba(0, 0, 0, 1);
+	margin: 1.7px 1px 1px 1.1px;
+	padding: 1px;
+	position: inherit;
+	float: left;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	font-size: x-large;
+	font-family: 'Franklin Gothic Medium';
+	font-weight: 900;
+}
+
+.board img {
+	position: absolute;
+	border: none;
+	outline: none;
+}
+
+/* disigning snakes and ladders start */
+
+#l1 {
+	z-index: 9;
+	rotate: none;
+	top: 5.2%;
+	left: 20.6%;
+	height: 23%;
+	width: 5%;
+}
+
+#l2 {
+	z-index: 9;
+	right: none;
+	left: 81.5%;
+	top: 50%;
+	width: 5%;
+	height: 44%;
+}
+
+#l3 {
+	z-index: 9;
+	rotate: 45deg;
+	left: 28%;
+	top: 47%;
+	height: 32%;
+	width: 3.5%;
+}
+
+#l4 {
+	z-index: 9;
+	rotate: 150deg;
+	left: 48%;
+	top: 24%;
+	height: 35%;
+	width: 4.6%;
+
+}
+
+#l5 {
+	z-index: 9;
+	rotate: 40deg;
+	top: 38.5%;
+	left: 62.5%;
+	height: 53%;
+	width: 5.5%;
+}
+
+#l6 {
+	z-index: 9;
+	rotate: none;
+	top: 11%;
+	left: 69%;
+	height: 25%;
+	width: 4.6%;
+
+}
+
+#s1 {
+	z-index: 9;
+	top: 33%;
+	rotate: none;
+	left: 15%;
+	height: 30%;
+	width: 11.4%;
+}
+
+#s2 {
+	z-index: 9;
+	rotate: none;
+	top: 70%;
+	left: 22.5%;
+	height: 25%;
+	width: 18%;
+}
+
+#s3 {
+	z-index: 9;
+	rotate: 30deg;
+	top: -3%;
+	left: 23%;
+	height: 72%;
+	width: 7.7%;
+}
+
+#s4 {
+	z-index: 9;
+	rotate: none;
+	top: 4%;
+	left: 76%;
+	height: 40%;
+	width: 10%;
+}
+
+#s5 {
+	z-index: 9;
+	rotate: none;
+	top: 45%;
+	left: 40%;
+	height: 25%;
+	width: 10%;
+}
+
+#s6 {
+	z-index: 9;
+	rotate: 45deg;
+	top: 66%;
+	left: 65%;
+	height: 25%;
+	width: 15%;
+}
+
+/* disigning snakes and ladders end */
+#box68,
+#box69,
+#box73,
+#box79,
+#box82,
+#box88 {
+	justify-content: left;
+	align-items: center;
+}
+
+#box11,
+#box30,
+#box31,
+#box44,
+#box50 {
+	justify-content: right;
+	align-items: center;
+}
+
+#box18,
+#box34,
+#box48,
+#box59,
+#box78 {
+	justify-content: start;
+	align-items: start;
+}
+
+#box23,
+#box24,
+#box46 {
+	justify-content: left;
+	align-items: end;
+}
+
+#box27,
+#box38 {
+	justify-content: right;
+	align-items: end;
+}
+
+#box55 {
+	justify-content: right;
+	align-items: center;
+}
+
+#box15,
+#box65 {
+	justify-content: left;
+	align-items: end;
+}
+
+#box62,
+#box76,
+#box97 {
+	justify-content: center;
+	align-items: start;
+}
+/*Pawns designing start*/
+.pawns1
+{
+	position: absolute;
+	height: 5%;
+	width: 1.7%;
+	z-index: 990;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.pawns2 {
+	position: absolute;
+	height: 5%;
+	width: 1.7%;
+	z-index: 990;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+/*Pawns designing end*/
+	</style>
+</head>
+<body onload="init()" class="bg-info">
+	<div class="container-box">
+		<div class="diceImg">
+			<img src="1.png" alt="dice 1 not found" onclick="FlippingDice()" id="diceIMG1" />
+		</div>
+		<div class="board">
+			<div class="box" id="box100">100</div>
+			<div class="box" id="box99">99</div>
+			<div class="box" id="box98">98</div>
+			<div class="box" id="box97">97</div>
+			<div class="box" id="box96">96</div>
+			<div class="box" id="box95">95</div>
+			<div class="box" id="box94">94</div>
+			<div class="box" id="box93">93</div>
+			<div class="box" id="box92">92</div>
+			<div class="box" id="box91">91</div>
+			<div class="box" id="box81">81</div>
+			<div class="box" id="box82">82</div>
+			<div class="box" id="box83">83</div>
+			<div class="box" id="box84">84</div>
+			<div class="box" id="box85">85</div>
+			<div class="box" id="box86">86</div>
+			<div class="box" id="box87">87</div>
+			<div class="box" id="box88">88</div>
+			<div class="box" id="box89">89</div>
+			<div class="box" id="box90">90</div>
+			<div class="box" id="box80">80</div>
+			<div class="box" id="box79">79</div>
+			<div class="box" id="box78">78</div>
+			<div class="box" id="box77">77</div>
+			<div class="box" id="box76">76</div>
+			<div class="box" id="box75">75</div>
+			<div class="box" id="box74">74</div>
+			<div class="box" id="box73">73</div>
+			<div class="box" id="box72">72</div>
+			<div class="box" id="box71">71</div>
+			<div class="box" id="box61">61</div>
+			<div class="box" id="box62">62</div>
+			<div class="box" id="box63">63</div>
+			<div class="box" id="box64">64</div>
+			<div class="box" id="box65">65</div>
+			<div class="box" id="box66">66</div>
+			<div class="box" id="box67">67</div>
+			<div class="box" id="box68">68</div>
+			<div class="box" id="box69">69</div>
+			<div class="box" id="box70">70</div>
+			<div class="box" id="box60">60</div>
+			<div class="box" id="box59">59</div>
+			<div class="box" id="box58">58</div>
+			<div class="box" id="box57">57</div>
+			<div class="box" id="box56">56</div>
+			<div class="box" id="box55">55</div>
+			<div class="box" id="box54">54</div>
+			<div class="box" id="box53">53</div>
+			<div class="box" id="box52">52</div>
+			<div class="box" id="box51">51</div>
+			<div class="box" id="box41">41</div>
+			<div class="box" id="box42">42</div>
+			<div class="box" id="box43">43</div>
+			<div class="box" id="box44">44</div>
+			<div class="box" id="box45">45</div>
+			<div class="box" id="box46">46</div>
+			<div class="box" id="box47">47</div>
+			<div class="box" id="box48">48</div>
+			<div class="box" id="box49">49</div>
+			<div class="box" id="box50">50</div>
+			<div class="box" id="box40">40</div>
+			<div class="box" id="box39">39</div>
+			<div class="box" id="box38">38</div>
+			<div class="box" id="box37">37</div>
+			<div class="box" id="box36">36</div>
+			<div class="box" id="box35">35</div>
+			<div class="box" id="box34">34</div>
+			<div class="box" id="box33">33</div>
+			<div class="box" id="box32">32</div>
+			<div class="box" id="box31">31</div>
+			<div class="box" id="box21">21</div>
+			<div class="box" id="box22">22</div>
+			<div class="box" id="box23">23</div>
+			<div class="box" id="box24">24</div>
+			<div class="box" id="box25">25</div>
+			<div class="box" id="box26">26</div>
+			<div class="box" id="box27">27</div>
+			<div class="box" id="box28">28</div>
+			<div class="box" id="box29">29</div>
+			<div class="box" id="box30">30</div>
+			<div class="box" id="box20">20</div>
+			<div class="box" id="box19">19</div>
+			<div class="box" id="box18">18</div>
+			<div class="box" id="box17">17</div>
+			<div class="box" id="box16">16</div>
+			<div class="box" id="box15">15</div>
+			<div class="box" id="box14">14</div>
+			<div class="box" id="box13">13</div>
+			<div class="box" id="box12">12</div>
+			<div class="box" id="box11">11</div>
+			<div class="box" id="box1"><img src="pawns1.jpg" alt="pawns1 not found" class="pawns1" id="pawns1" /><img
+					src="pawns2.jpg" alt="pawns2 not found" class="pawns2" id="pawns2" />1</div>
+			<div class="box" id="box2">2</div>
+			<div class="box" id="box3">3</div>
+			<div class="box" id="box4">4</div>
+			<div class="box" id="box5">5</div>
+			<div class="box" id="box6">6</div>
+			<div class="box" id="box7">7</div>
+			<div class="box" id="box8">8</div>
+			<div class="box" id="box9">9</div>
+			<div class="box" id="box10">10</div>
+			<img src="ladder1.png" alt="ladder 1 not found" id="l1" />
+			<img src="ladder2.png" alt="ladder 2 not found" id="l2" />
+			<img src="ladder3.png" alt="ladder 3 not found" id="l3" />
+			<img src="ladder3.png" alt="ladder 4 not found" id="l4" />
+			<img src="ladder2.png" alt="ladder 5 not found" id="l5" />
+			<img src="ladder1.png" alt="ladder 6 not found" id="l6" />
+			<img src="snake1.png" alt="snake 1 not found" id="s1" />
+			<img src="snake2.png" alt="snake 2 not found" id="s2" />
+			<img src="snake3.png" alt="snake 3 not found" id="s3" />
+			<img src="snake4.png" alt="snake 4 not found" id="s4" />
+			<img src="snake5.png" alt="snake 5 not found" id="s5" />
+			<img src="snake6.png" alt="snake 6 not found" id="s6" />
+		</div>
+		<div class="diceImg">
+			<img src="1.png" alt="dice 2 not found" onclick="FlippingDice()" id="diceIMG2" />
+		</div>
+	</div>
+</body>
+</html>
+<script>
+	//needed variables
+		let num = 0,
+			player = 1;
+		let blockId1 = 1;
+		let blockId2 = 1;
+
+		//color giving start
+		function init() {
+			for (x = 1; x <= 100; x++) {
+				if (num == 0) {
+					document.getElementById("box" + x).style.backgroundColor =
+						"rgb(184, 0, 73)";
+					num++;
+				} else if (num == 1) {
+					document.getElementById("box" + x).style.backgroundColor = "rgb(0,255,0)";
+					num++;
+				} else if (num == 2) {
+					document.getElementById("box" + x).style.backgroundColor =
+						"rgb(255,255,0)";
+					num++;
+				} else if (num == 3) {
+					document.getElementById("box" + x).style.backgroundColor =
+						"rgb(22, 167, 255)";
+					num++;
+				} else if (num == 4) {
+					document.getElementById("box" + x).style.backgroundColor =
+						"rgb(255, 0, 255)";
+					num++;
+				} else {
+					document.getElementById("box" + x).style.backgroundColor =
+						"rgb(255, 255, 255)";
+					num = 0;
+				}
+			}
+		}
+		///color giving end
+		//dice flipping and get random values start
+		function FlippingDice() {
+			let num = Math.ceil(Math.random() * 6);
+			if (num == 1) {
+				document.getElementById("diceIMG" + player).src = "1.png";
+			} else if (num == 2) {
+				document.getElementById("diceIMG" + player).src = "2.png";
+			} else if (num == 3) {
+				document.getElementById("diceIMG" + player).src = "3.png";
+			} else if (num == 4) {
+				document.getElementById("diceIMG" + player).src = "4.png";
+			} else if (num == 5) {
+				document.getElementById("diceIMG" + player).src = "5.png";
+			} else if (num == 6) {
+				document.getElementById("diceIMG" + player).src = "6.png";
+			}
+			if (player == 1) {
+				runPawn(num, player);
+				player = 2;
+			} else {
+				runPawn(num, player);
+				player = 1;
+			}
+		}
+		//dice flipping and get random values end
+		//Running Pawns as per dice number start
+		function runPawn(num, player) {
+			alert(num + " with player = " + player);
+			if (player != 2 && player != 1) {
+				alert("Something Went Wrong <? SERVER ERROR ?>");
+				if (confirm("Do you want to play again?")) {
+					location.reload();
+				} else {
+					alert("Thank you For playing with us!");
+				}
+			}
+			let p1 = document.getElementById("pawns1");
+			let p2 = document.getElementById("pawns2");
+			if (player == 1) {
+				blockId1 += num;
+				blockId1 = restricted(blockId1, num);
+				document.getElementById("box" + blockId1).append(p1);
+				let TFBLOCK = 0;
+				TFBLOCK = Number.parseInt(checkDyingOrSteping(blockId1));
+				if (TFBLOCK != 0) {
+					blockId1 = TFBLOCK;
+					document.getElementById("box" + blockId1).append(p1);
+				}
+				if (blockId2 == Number.parseInt(100)) {
+					gameOver();
+				}
+			} else if (player == 2) {
+				blockId2 += num;
+				blockId2 = restricted(blockId2, num);
+				document.getElementById("box" + blockId2).append(p2);
+				let TFBLOCK = 0;
+				TFBLOCK = Number.parseInt(checkDyingOrSteping(blockId2));
+				if (TFBLOCK != 0) {
+					blockId2 = TFBLOCK;
+					document.getElementById("box" + blockId2).append(p2);
+				}
+				if (blockId2 == Number.parseInt(100)) {
+					gameOver();
+				}
+			} else {
+				errorFunction();
+			}
+		}
+		//Running Pawns as per dice number end
+		//check the pawn will step up or eaten by snake start
+		function checkDyingOrSteping(blockID) {
+			Number.parseInt(blockID);
+			if (blockID == Number.parseInt(10)) {
+				blockID = 50;
+				return blockID;
+			} else if (blockID == Number.parseInt(15)) {
+				blockID = 52;
+				return blockID;
+			} else if (blockID == Number.parseInt(22)) {
+				blockID = 44;
+				return blockID;
+			} else if (blockID == Number.parseInt(46)) {
+				blockID = 76;
+				return blockID;
+			} else if (blockID == Number.parseInt(68)) {
+				blockID = 88;
+				return blockID;
+			} else if (blockID == Number.parseInt(79)) {
+				blockID = 99;
+				return blockID;
+			} else if (blockID == Number.parseInt(97)) {
+				blockID = 41;
+				return blockID;
+			} else if (blockID == Number.parseInt(91)) {
+				blockID = 52;
+				return blockID;
+			} else if (blockID == Number.parseInt(61)) {
+				blockID = 39;
+				return blockID;
+			} else if (blockID == Number.parseInt(57)) {
+				blockID = 36;
+				return blockID;
+			} else if (blockID == Number.parseInt(23)) {
+				blockID = 2;
+				return blockID;
+			} else if (blockID == Number.parseInt(33)) {
+				blockID = 8;
+				return blockID;
+			} else {
+				return blockID;
+			}
+		}
+		//check the pawn will step up or eaten by snake end
+		//error block start
+		function errorFunction() {
+			alert("Error While Playing Game");
+			alert("Sorry!");
+			const swalWithBootstrapButtons = Swal.mixin({
+				customClass: {
+					confirmButton: "btn btn-success",
+					cancelButton: "btn btn-danger",
+				},
+				buttonsStyling: false,
+			});
+
+			swalWithBootstrapButtons
+				.fire({
+					title: "Are you sure?",
+					text: "You won't be able to revert this!",
+					icon: "warning",
+					showCancelButton: true,
+					confirmButtonText: "Yes, delete it!",
+					cancelButtonText: "No, cancel!",
+					reverseButtons: true,
+				})
+				.then((result) => {
+					if (result.isConfirmed) {
+						swalWithBootstrapButtons.fire(
+							"Deleted!",
+							"Your file has been deleted.",
+							"success"
+						);
+						location.reload();
+					} else if (
+						/* Read more about handling dismissals below */
+						result.dismiss === Swal.DismissReason.cancel
+					) {
+						swalWithBootstrapButtons.fire(
+							"Cancelled",
+							"Your imaginary file is safe :)",
+							"error"
+						);
+					}
+				});
+		}
+		function restricted(overNumber, overnum) {
+			if (overNumber > 100) {
+				return Number.parseInt(overNumber - overnum);
+			} else {
+				return overNumber;
+			}
+		}
+		//error block end
+		//game over teplate start
+		function gameOver() { }
+//game over teplate end
+
+</script>
